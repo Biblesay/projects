@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charles wesley website</title>
+    <style>
+        body{ font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0;  background-image: url(amokay.jpg);}
+        header{background: cornflowerblue; color: white; padding: 15px; font-size: 24px; }
+        .container{width: 50%; margin: 20px auto; background: rgb(244, 189, 189); padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px gray; }
+        input, textarea{width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;}
+        button {background: #04e839; color: azure; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px;}
+        button:hover{background: #218838;}
+    </style>
+
+</head>
+<body>
+    <header>Welcome To Charles Wesley Methodist Church</header>
+
+    <div class="container">
+        <h2>New Member Registration</h2>
+        <form id="membershipform">
+            <input type="text" id="name" placeholder="full name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="residence" id=" residence" placeholder="residential address" required>
+            <textarea id="message" placeholder="Kindly Tell us about yourself" required></textarea>
+            <button type="submit">join Now</button>
+
+        </form>
+        <p id="response" style="color: rgb(12, 18, 16); margin-top: 1opx;"></p>
+    </div>
+
+    <script>
+           document.getElementById("membershipform").addEventListener("submit", function(event) 
+           {
+            event.preventDefault();
+            document.getElementById("response").innerText="Thank you for registering!! we will contact you soon...";
+            document.getElementById("membershipform").reset();
+
+           });
+
+    </script>
+    <a href="wesley@35.html">get to know us better......</a>
+</body>
+</html>

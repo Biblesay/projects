@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Bible Lessons</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #333; color: white; padding: 15px; font-size: 24px; }
+        .container { width: 50%; margin: 20px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px gray; }
+        h2 { color: #333; }
+        p { font-size: 18px; }
+        .lesson { background: #e8f0fe; padding: 15px; border-radius: 5px; margin-top: 10px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; margin-top: 10px; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <header>Daily Bible Lessons</header>
+    
+    <div class="container">
+        <h2>Today's Lesson</h2>
+        <div class="lesson" id="lessonContent">Loading...</div>
+        <button onclick="loadLesson()">Get New Lesson</button>
+    </div>
+
+    <script>
+        const lessons = [
+            "Trust in the Lord with all your heart - Proverbs 3:5",
+            "I can do all things through Christ who strengthens me - Philippians 4:13",
+            "Be strong and courageous. Do not be afraid - Joshua 1:9",
+            "The Lord is my shepherd, I lack nothing - Psalm 23:1",
+            "Do to others as you would have them do to you - Luke 6:31",
+            "if my children will obey me, they will plenty to eat-isaiah 1:9",
+            "and when the time is up,I the Lord thy God will make it happen-isaiah 60:22",
+            "he who dwelleth in the secrete plce of the most high shall abide under the shadow of the Almighty-Psalm 91:1",
+            "i shall not die but live and proclaim the works of the Lord-Psalm 118:17",
+            "therefore if any man says i love God and hateh his brother, he is a lie for how can you love God whom you have not seen and hate your brother whom you have seen-John 14:20 ",
+        ];
+
+        function loadLesson() {
+            const lessonContent = document.getElementById("lessonContent");
+            const randomIndex = Math.floor(Math.random() * lessons.length);
+            lessonContent.innerText = lessons[randomIndex];
+        }
+
+        // Load a lesson on page load
+        window.onload = loadLesson;
+    </script>
+    <a href="church.html">register</a>
+</body>
+</html>
+
+

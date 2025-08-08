@@ -1,0 +1,35 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(214, 155, 155, 0.6);
+  padding: 15px 0;
+  text-align: left;
+  z-index: 1;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+.hero-image {
+  background-image: url('church-front.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
